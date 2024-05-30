@@ -1,0 +1,316 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #10002c;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img {
+    height: 15%; /* Adjust as needed */
+    width: 15%;  /* Adjust as needed */
+    margin-left: 7rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: rgb(255, 59, 0);
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding-right: 10%;
+}
+
+.menu-items li {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    display: flex; 
+}
+
+.menu-items li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Adjust as needed to position the line properly */
+    left: 50%;
+    width: 0;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: transparent;
+    transition: width 0.3s ease;
+}
+
+.menu-items li a:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: rgb(255, 59, 0);
+}
+
+.menu-items li i {
+    margin-right: 0.8rem;
+}
+
+.home-content {
+    padding-top: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Initially hide the content */
+    transform: translateY(100px); /* Move the content down */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.home-content.show {
+    opacity: 1; /* Show the content */
+    transform: translateY(0);
+}
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.name h1 {
+    margin: 0; 
+    font-size: 3rem;
+}
+
+.name h1:first-child {
+    margin-right: 10px; 
+}
+
+
+.para p{
+    font-size: 1.8rem;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: rgb(222, 79, 36);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: rgb(255, 90, 0); 
+    color: black;
+}
+
+/*projects */
+.projects {
+    position: relative; 
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+    transform: skewY(-3deg); /* Adjusted transformation for the desired effect */
+}
+
+.projects h1 {
+    padding-top: 50px;
+    display: inline-block; /* Make the <h1> elements inline-block to align them horizontally */
+    font-size: 3rem;
+    font-family:  Verdana sans-serif;
+    margin-right: 15px; 
+}
+.pro-effect{
+    opacity: 0; /* Initially hide the content */
+    transform: translateY(100px); /* Move the content down */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.pro-effect.show {
+    opacity: 1; /* Show the content */
+    transform: translateY(0);
+}
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 1000px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-image {
+    order: 1; /* For alternating layout */
+}
+.project-details {
+    order: 2; /* For alternating layout */
+}
+
+.project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.project-image img {
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.project-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.project-details h2 {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.project-details p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.pro-button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 90px;
+    background-color: rgb(222, 79, 36);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.pro-button:hover {
+    background-color: rgb(255, 90, 0);
+    color: black;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    
+}
+
+.icons i {
+    margin-left:10px;
+    font-size: 1.5rem;
+    transition: font-size 0.3s;
+}
+.icons i:hover {
+    font-size: 2rem; /* Increase size on hover */
+}
+.icons p{
+    color: rgb(154, 154, 154)
+}
+
+/* Colors for the icons */
+.icons .fa-python {
+    color: #3776AB; /* Python blue */
+}
+.icons .fa-cubes {
+    color: #013243; /* NumPy color */
+}
+.icons .fa-brain {
+    color: #F9A825; /* Deep Learning yellow */
+}
+.icons .fa-youtube{
+    color:rgb(255, 59, 0)
+}
+.icons .fa-chart-line{
+    color: #00bfff;
+}
+.icons .fa-database{
+    color: #008080;
+}
+.icons .fa-car{
+    color: #4c4c4c;
+}
+.icons .fa-html5{
+    color: #E34F26;
+} 
+.icons .fa-css3-alt{
+    color: #1572B6;
+}
+.icons .fa-js-square{
+    color: #F7DF1E;
+}
+.icons .fa-github {
+    color: #000000; /* Deep Learning yellow */
+}
+
+/*skills */
+.skills {
+    position: relative; 
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+
+.skills h1 {
+    padding-top: 50px;
+    display: inline-block; /* Make the <h1> elements inline-block to align them horizontally */
+    font-size: 3rem;
+    font-family:  Verdana sans-serif;
+    margin-right: 15px; 
+}
