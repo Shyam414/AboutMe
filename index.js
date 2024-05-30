@@ -129,3 +129,38 @@ window.addEventListener("scroll", function() {
     });
 });
 
+window.addEventListener("scroll", function() {
+    var projects = document.querySelectorAll(".contact-box");
+
+    projects.forEach(function(project) {
+        var projectTop = project.getBoundingClientRect().top;
+        var triggerPoint = window.innerHeight - 100; // Adjust as needed
+
+        if (projectTop < triggerPoint) {
+            project.classList.add("show");
+        } else {
+            project.classList.remove("show");
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) { // Adjust this value as needed
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to the top when the button is clicked
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling animation
+        });
+    });
+});
