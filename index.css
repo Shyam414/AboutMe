@@ -715,9 +715,9 @@ canvas {
 
 .social-box {
     position: fixed;
-    left: -10%;
+    left: -8%;
     transform: translateY(-50%);
-    width: 200px;
+    width: 150px;
     height: 60px;
     border-radius: 0 50px 50px 0;
     transition: left 0.3s ease-in-out;
@@ -776,5 +776,5 @@ canvas {
 }
 
 .social-box:hover {
-    left: 0;
+    left: -1%;
 }
