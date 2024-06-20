@@ -138,11 +138,13 @@ canvas {
     text-decoration: none;
     border-radius: 5px;
     margin-right: 10px;
+    transition: transform 0.3s;
 }
 
 .button:hover {
     background-color: rgb(255, 90, 0); 
     color: black;
+    transform: scale(1.2);
 }
 
 /*projects */
@@ -211,7 +213,11 @@ canvas {
 .project-image img {
     width: 500px;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 10px;   
+    transition: transform 0.3s;
+}
+.project-image img:hover {
+    transform: scale(1.05);
 }
 
 .project-details {
